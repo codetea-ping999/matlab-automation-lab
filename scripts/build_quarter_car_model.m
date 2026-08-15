@@ -20,7 +20,7 @@ if bdIsLoaded(modelName)
 end
 
 new_system(modelName);
-cleanup = onCleanup(@() close_if_loaded(modelName));
+cleanup = onCleanup(@() close_if_loaded(modelName)); %#ok<NASGU>
 
 set_param(modelName, ...
     "Solver", "ode45", ...
@@ -59,7 +59,8 @@ end
 add_line(modelName, "Road Step/1", "Quarter Car Plant/1", "autorouting", "on");
 add_line(modelName, "Quarter Car Plant/1", "Outputs/1", "autorouting", "on");
 for i = 1:4
-    add_line(modelName, "Outputs/" + i, blockNames(i) + "/1", "autorouting", "on");
+    sourcePort = "Outputs/" + string(i);
+    add_line(modelName, sourcePort, blockNames(i) + "/1", "autorouting", "on");
 end
 
 save_system(modelName, modelPath);
