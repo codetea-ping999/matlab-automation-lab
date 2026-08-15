@@ -1,0 +1,19 @@
+# Generated Simulink models
+models/*.slx
+models/*.slxc
+
+# Simulation cache / generated code
+slprj/
+*.autosave
+*.slxc
+
+# Generated reports and data
+results/
+
+# MATLAB temporary files
+*.asv
+*.m~
+
+# OS files
+.DS_Store
+Thumbs.db
