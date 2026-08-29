@@ -1,0 +1,4 @@
+case_id,sprung_mass_kg,unsprung_mass_kg,spring_npm,damper_nspm,tire_npm,road_height_m,road_step_time_s,sim_stop_time_s,max_body_accel_mps2,max_suspension_travel_mm
+baseline,300,40,18000,1500,180000,0.05,0.5,5,5.0,80
+comfort,300,40,15000,1800,180000,0.05,0.5,5,5.0,80
+sport,300,40,24000,2200,180000,0.05,0.5,5,5.0,80
